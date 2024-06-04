@@ -123,17 +123,15 @@ matchmesh = np.logical_and(datematch, distmatch)
 
 
 # then just do some sums to get T/F for the indices where there's a match!
-# crap this loses if a point in one track matches to multiple in another track
+# hmmm this loses if a point in one track matches to multiple in another track
 # which is itself an interesting question
-# that I should not be answering at 2am
-# but am going to try to anyways
 
 matchindices850 = np.sum(matchmesh, axis=1)
 matchindices700 = np.sum(matchmesh, axis=0)
 
-# remove sus matches
+# remove suspicious matches
 # go through each list and find where the sum is greater than 1
-# then find the indices in the row where the sus points are
+# then find the indices in the row where the suspicious points are
 # compare the distances and see which one is closer
 # make that be the one that gets saved
 
