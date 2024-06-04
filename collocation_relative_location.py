@@ -86,10 +86,6 @@ NHdy = matchlatsNH700 - matchlatsNH850
 SHdx = matchlonsSH700 - matchlonsSH850
 SHdy = matchlatsSH700 - matchlatsSH850
 
-#can I quickly correct for the date line in the dx vars?
-def datelinecorrection(dx):
-    
-
 
 def plotDartboard(dx, dy, hemi):    
     fig = plt.figure(figsize=(7,5),dpi=300)
